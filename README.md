@@ -1,6 +1,6 @@
 # 🎙️ Real-time Audio Transcription App
 
-Hey there! Welcome to this cool little app that turns your babbling computer into text, all thanks to the magic of Deepgram's API. It's like having a super-fast typist listening to everything coming out of your computer's speakers. Neat, huh?
+Hey there! Welcome to this cool little app that turns your babbling computer into text, all thanks to the magic of Deepgram's API.
 
 ## ✨ What's This App Do?
 
