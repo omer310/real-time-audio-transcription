@@ -71,7 +71,7 @@ Got ideas? Found a bug? Think you can make it even cooler? Awesome! Feel free to
 
 ## 📜 Legal Stuff
 
-This project is under the MIT License. Basically, do whatever you want with it, just don't blame us if something goes wrong. Check out the [LICENSE](LICENSE) file for the boring details.
+This project is under the MIT License. Basically, do whatever you want with it, just don't blame me if something goes wrong. Check out the [LICENSE](LICENSE) file for the boring details.
 
 ## 🆘 Help! Something's Not Working!
 
