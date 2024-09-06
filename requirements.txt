@@ -1,3 +1,4 @@
 websockets==10.4
 soundcard==0.4.2
 numpy==1.21.5
+python-dotenv==0.19.2
