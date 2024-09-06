@@ -41,25 +41,9 @@ Hey there! Welcome to this cool little app that turns your computer talk or your
    - Copy that new key. 
 
 6. Let your computer know about your new secret key:
-   - If you're a Windows fan:
-     Open Command Prompt and type:
-     ```
-     setx DEEPGRAM_API_KEY "paste-your-secret-key-here"
-     setx OPENAI_API_KEY "paste-your-secret-key-here"
-     ```
-   - If you're on a Mac or Linux:
-     Open Terminal and type:
-     ```
-     echo 'export DEEPGRAM_API_KEY="paste-your-secret-key-here"' >> ~/.bash_profile
-     echo 'export OPENAI_API_KEY="paste-your-secret-key-here"' >> ~/.bash_profile
-     source ~/.bash_profile
-     ```
-
-7. Double-check it worked:
-   - Open a fresh terminal window
-   - Type: 
-     - Windows \ Mac \Linux: `echo %DEEPGRAM_API_KEY%` and `echo %OPENAI_API_KEY%`
-   - If you see your key, give yourself a high five!
+   - create a .env file in the root of the project and provide it with the following: 
+      - DEEPGRAM_API_KEY=" YOUR SECCRT KEY HERE"
+      - OPENAI_API_KEY=" YOUR SECCRT KEY HERE"
 
 ## 🎉 Let's Run This Thing!
 
