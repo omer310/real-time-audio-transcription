@@ -40,7 +40,7 @@ Hey there! Welcome to this cool little app that turns your computer talk or your
    - Click "Create new secret key"
    - Copy that new key. 
 
-6. Let your computer know about your new secret key:
+5. Let your computer know about your new secret key:
    - create a .env file in the root of the project and provide it with the following: 
       - DEEPGRAM_API_KEY=" YOUR SECCRT KEY HERE"
       - OPENAI_API_KEY=" YOUR SECCRT KEY HERE"
