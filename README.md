@@ -1,17 +1,19 @@
 # 🎙️ Real-time Audio Transcription App
 
-Hey there! Welcome to this cool little app that turns your babbling computer into text, all thanks to the magic of Deepgram's API. It's like having a super-fast typist listening to everything coming out of your computer's speakers. Neat, huh?
+Hey there! Welcome to this cool little app that turns your computer talk or your talk into text all thanks to the magic of Deepgram's and Open AI API's. It's like having a super-fast typist listen to everything from your computer's speakers and microphone if you want.
 
 ## ✨ What's This App Do?
 
-- Grabs audio from your computer.
+- Grabs audio from your computer or microphone. (Listening from both is coming soon)
 - Uses Deepgram's fancy API to turn that audio into text.
-- Shows you the text in a nice, easy-to-use window.
+- Shows you the text in a nice, easy-to-use window. (UPDATED!!!!)
+- Cleans and summarizes your transcription using Open AI API. (NEW!)
 
 ## 🛠️ What You'll Need
 
 - Python 3.7 or newer 
 - A Deepgram API key (don't worry, I'll show you how to get one)
+- Open AI API key
 
 ## 🚀 Getting Started
 
@@ -21,7 +23,7 @@ Hey there! Welcome to this cool little app that turns your babbling computer int
    cd real-time-audio-transcription
    ```
 
-2. Install the goodies:
+2. Install the neccesitis:
    ```
    pip install -r requirements.txt
    ```
@@ -29,27 +31,34 @@ Hey there! Welcome to this cool little app that turns your babbling computer int
 3. Get your hands on a Deepgram API key:
    - Pop over to [Deepgram](https://deepgram.com) and sign up. It's free!
    - Once you're in, head to the [API Keys dashboard](https://console.deepgram.com/api-keys).
-   - Click "Create API Key" (it's like making a new key for your secret clubhouse)
-   - Copy that shiny new key. Guard it with your life!
+   - Click "Create API Key" 
+   - Copy that new key.
 
-4. Let your computer know about your new secret key:
+4.  Get your hands on an OPENAI API key:
+   - Pop over to [Open AI]([https://openai.com/index/openai-api/]) and sign up.
+   - Go to 'your profile' and head to the 'User API keys'
+   - Click "Create new secret key"
+   - Copy that new key. 
+
+6. Let your computer know about your new secret key:
    - If you're a Windows fan:
      Open Command Prompt and type:
      ```
      setx DEEPGRAM_API_KEY "paste-your-secret-key-here"
+     setx OPENAI_API_KEY "paste-your-secret-key-here"
      ```
    - If you're on a Mac or Linux:
      Open Terminal and type:
      ```
      echo 'export DEEPGRAM_API_KEY="paste-your-secret-key-here"' >> ~/.bash_profile
+     echo 'export OPENAI_API_KEY="paste-your-secret-key-here"' >> ~/.bash_profile
      source ~/.bash_profile
      ```
 
-5. Double-check it worked:
+7. Double-check it worked:
    - Open a fresh terminal window
    - Type: 
-     - Windows: `echo %DEEPGRAM_API_KEY%`
-     - Mac/Linux: `echo $DEEPGRAM_API_KEY`
+     - Windows \ Mac \Linux: `echo %DEEPGRAM_API_KEY%` and `echo %OPENAI_API_KEY%`
    - If you see your key, give yourself a high five!
 
 ## 🎉 Let's Run This Thing!
@@ -58,12 +67,15 @@ Hey there! Welcome to this cool little app that turns your babbling computer int
    ```
    python Live.py
    ```
+2. Name your transcription.
 
-2. Hit "Start Transcription" and let your computer talk to itself.
+3. Hit "Start Transcription" and let your computer talk to itself or you talk to yourself.
 
-3. When you're done, click "Stop Transcription". Magic!
+4. When you're done, click "Stop Transcription". Magic!
 
-4. Check out your transcribed masterpiece in the app window. We've also saved a copy in the `output` folder, you know, for posterity.
+5. You can hit the big red button 'clear' to clear your previous transcription.
+
+6. Check out your transcribed masterpiece in the app window. We've also saved a copy in the `output` folder. You will have three files "Name, Name_cleaned and Name_summary"
 
 ## 🤝 Want to Make It Better?
 
@@ -71,13 +83,13 @@ Got ideas? Found a bug? Think you can make it even cooler? Awesome! Feel free to
 
 ## 📜 Legal Stuff
 
-This project is under the MIT License. Basically, do whatever you want with it, just don't blame us if something goes wrong. Check out the [LICENSE](LICENSE) file for the boring details.
+This project is under the MIT License. Do whatever you want with it, just don't blame me if something goes wrong. Check out the [LICENSE](LICENSE) file for the boring details.
 
 ## 🆘 Help! Something's Not Working!
 
 If things go sideways:
-- Make sure that DEEPGRAM_API_KEY is set up right. No typos!
-- Check if your Deepgram account is still active. They didn't kick you out, did they?
+- Make sure that DEEPGRAM_API_KEY and OPENAI_API_KEY set up right. No typos!
+- Check if your Deepgram and OPENAI accounts are still active. They didn't kick you out, did they?
 - Is your internet working? The app needs to talk to Deepgram's servers, so no internet = no transcription.
 
 Happy transcribing! 🎉🎊
