@@ -47,7 +47,7 @@ class TranscriptionApp:
         self.word_count = 0
 
         # Set the output directory
-        self.output_dir = r"C:\Users\omers\OneDrive\Documents\output for live"
+        self.output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
         
         # Ensure output directory exists
         os.makedirs(self.output_dir, exist_ok=True)
