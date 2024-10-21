@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/94ddf919-c0d4-4ff1-b832-1afe2e354700)
+
 # 🎙️ Real-time Audio Transcription App
 
 Hey there! Welcome to this cool little app that turns your computer talk or your talk into text all thanks to the magic of Deepgram's and Open AI API's. It's like having a super-fast typist listen to everything from your computer's speakers and microphone if you want.
