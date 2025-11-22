@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/94ddf919-c0d4-4ff1-b832-1afe2e354700)
+<img width="1205" height="831" alt="image" src="https://github.com/user-attachments/assets/0c5b850d-8951-472b-80e4-d6fbf8fed63a" />
+
 
 # 🎙️ Live Transcription
 
