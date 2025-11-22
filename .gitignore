@@ -7,3 +7,6 @@ AudioTranscriber.spec
 output/
 
 .env
+
+# Build scripts with sensitive data
+build_app.bat
