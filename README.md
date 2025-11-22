@@ -45,7 +45,7 @@ So you know how sometimes you're in a meeting, watching a video, or just talking
    python Live_Enhanced.py
    ```
 
-## For non-developers (Easy mode)
+## For non-developers (Easy mode. Still work on this!) 
 
 Just want to use it without dealing with Python? No problem:
 
