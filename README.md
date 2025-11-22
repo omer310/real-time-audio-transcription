@@ -2,20 +2,20 @@
 
 # 🎙️ Real-time Audio Transcription App
 
-Hey there! Welcome to this cool little app that turns your computer talk or your talk into text all thanks to the magic of Deepgram's and Open AI API's. It's like having a super-fast typist listen to everything from your computer's speakers and microphone if you want.
+Hey there! Welcome to this cool little app that turns your computer talk or your talk into text all thanks to the magic of OpenAI Whisper API! It's like having a super-fast typist listen to everything from your computer's speakers and microphone.
 
 ## ✨ What's This App Do?
 
-- Grabs audio from your computer or microphone. (Listening from both is coming soon)
-- Uses Deepgram's fancy API to turn that audio into text.
-- Shows you the text in a nice, easy-to-use window. (UPDATED!!!!)
-- Cleans and summarizes your transcription using Open AI API. (NEW!)
+- Grabs audio from your computer or microphone (or both!)
+- Uses OpenAI's latest **gpt-4o-transcribe** model for superior accuracy and reliability
+- Shows you the text in a nice, easy-to-use window
+- Cleans and summarizes your transcription using OpenAI GPT models
+- Automatically falls back to whisper-1 model if the latest model is unavailable
 
 ## 🛠️ What You'll Need
 
 - Python 3.7 or newer 
-- A Deepgram API key (don't worry, I'll show you how to get one)
-- Open AI API key
+- An OpenAI API key (for both Whisper transcription and GPT post-processing)
 
 ## 🚀 Getting Started
 
@@ -30,22 +30,15 @@ Hey there! Welcome to this cool little app that turns your computer talk or your
    pip install -r requirements.txt
    ```
 
-3. Get your hands on a Deepgram API key:
-   - Pop over to [Deepgram](https://deepgram.com) and sign up. It's free!
-   - Once you're in, head to the [API Keys dashboard](https://console.deepgram.com/api-keys).
-   - Click "Create API Key" 
-   - Copy that new key.
-
-4.  Get your hands on an OPENAI API key:
-   - Pop over to [Open AI]([https://openai.com/index/openai-api/]) and sign up.
-   - Go to 'your profile' and head to the 'User API keys'
+3. Get your OpenAI API key:
+   - Head over to [OpenAI](https://openai.com/index/openai-api/) and sign up
+   - Go to your profile and navigate to 'User API keys'
    - Click "Create new secret key"
-   - Copy that new key. 
+   - Copy that new key
 
-5. Let your computer know about your new secret key:
-   - create a .env file in the root of the project and provide it with the following: 
-      - DEEPGRAM_API_KEY=" YOUR SECCRT KEY HERE"
-      - OPENAI_API_KEY=" YOUR SECCRT KEY HERE"
+4. Set up your environment:
+   - Create a .env file in the root of the project with:
+      - OPENAI_API_KEY="YOUR_SECRET_KEY_HERE"
 
 ## 🎉 Let's Run This Thing!
 
@@ -71,11 +64,28 @@ Got ideas? Found a bug? Think you can make it even cooler? Awesome! Feel free to
 
 This project is under the MIT License. Do whatever you want with it, just don't blame me if something goes wrong. Check out the [LICENSE](LICENSE) file for the boring details.
 
+## 🔄 Updating to the Latest Version
+
+To ensure you're using the latest models and features:
+
+1. Update your dependencies:
+   ```
+   pip install --upgrade -r requirements.txt
+   ```
+
+2. The app now uses OpenAI's **gpt-4o-transcribe** model, which offers:
+   - Improved accuracy over the old whisper-1 model
+   - Better handling of accents and noisy environments
+   - More reliable transcription with varying speech speeds
+   - Automatic fallback to whisper-1 if the new model is unavailable
+
 ## 🆘 Help! Something's Not Working!
 
 If things go sideways:
-- Make sure that DEEPGRAM_API_KEY and OPENAI_API_KEY set up right. No typos!
-- Check if your Deepgram and OPENAI accounts are still active. They didn't kick you out, did they?
-- Is your internet working? The app needs to talk to Deepgram's servers, so no internet = no transcription.
+- Make sure your OPENAI_API_KEY is set up correctly in the .env file. No typos!
+- Check if your OpenAI account is still active and has available credits
+- Is your internet working? The app needs to talk to OpenAI's servers, so no internet = no transcription
+- The app now processes audio in 5-second chunks, so there might be a slight delay compared to real-time streaming
+- Run `python test_whisper.py` to verify your setup is working correctly
 
 Happy transcribing! 🎉🎊

@@ -1,0 +1,14 @@
+# Live Transcription App - Environment Variables Template
+# 
+# INSTRUCTIONS:
+# 1. Rename this file from 'env_template.txt' to '.env'
+# 2. Fill in your API keys below
+# 3. Place the .env file in the same folder as the executable
+#
+# How to get API keys:
+# - Deepgram: https://console.deepgram.com/signup (Free $200 credit)
+# - OpenAI: https://platform.openai.com/api-keys
+
+DEEPGRAM_API_KEY=your_deepgram_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
+

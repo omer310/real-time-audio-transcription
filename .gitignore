@@ -4,4 +4,6 @@ dist/
 
 AudioTranscriber.spec
 
+output/
+
 .env
