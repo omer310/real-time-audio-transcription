@@ -1,91 +1,110 @@
 ![image](https://github.com/user-attachments/assets/94ddf919-c0d4-4ff1-b832-1afe2e354700)
 
-# 🎙️ Real-time Audio Transcription App
+# 🎙️ Live Transcription
 
-Hey there! Welcome to this cool little app that turns your computer talk or your talk into text all thanks to the magic of OpenAI Whisper API! It's like having a super-fast typist listen to everything from your computer's speakers and microphone.
+So you know how sometimes you're in a meeting, watching a video, or just talking and thinking "man, I wish I had a transcript of this"? Well, this app's got your back. It listens to your computer's audio or your microphone and turns everything into text in real-time. Pretty neat, right?
 
-## ✨ What's This App Do?
+## What does this thing actually do?
 
-- Grabs audio from your computer or microphone (or both!)
-- Uses OpenAI's latest **gpt-4o-transcribe** model for superior accuracy and reliability
-- Shows you the text in a nice, easy-to-use window
-- Cleans and summarizes your transcription using OpenAI GPT models
-- Automatically falls back to whisper-1 model if the latest model is unavailable
+- **Live transcription** - Uses Deepgram's API to transcribe audio as it happens (seriously, it's fast)
+- **Speaker diarization** - Figures out who's talking when (works with multiple speakers)
+- **Computer audio or mic** - Capture system audio from videos/calls or use your microphone (or both at once!)
+- **AI-powered cleanup** - After transcribing, OpenAI cleans up the text and makes a nice summary
+- **Modern UI** - Dark mode with a Teenage Engineering-inspired design (because why not look good while transcribing?)
+- **Export everything** - Saves raw transcripts, cleaned versions, and summaries to text files
 
-## 🛠️ What You'll Need
+## What you'll need
 
-- Python 3.7 or newer 
-- An OpenAI API key (for both Whisper transcription and GPT post-processing)
+- Python 3.7+ (or just download the pre-built .exe if you're on Windows)
+- A [Deepgram API key](https://deepgram.com/) for the transcription part
+- An [OpenAI API key](https://platform.openai.com/) for the cleanup/summary features
+- Internet connection (the APIs need to do their thing)
 
-## 🚀 Getting Started
+## Quick start (for developers)
 
-1. Grab the code:
-   ```
-   git clone https://github.com/your-username/real-time-audio-transcription.git
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/omer310/real-time-audio-transcription.git
    cd real-time-audio-transcription
    ```
 
-2. Install the neccesitis:
-   ```
+2. Install dependencies:
+   ```bash
    pip install -r requirements.txt
    ```
 
-3. Get your OpenAI API key:
-   - Head over to [OpenAI](https://openai.com/index/openai-api/) and sign up
-   - Go to your profile and navigate to 'User API keys'
-   - Click "Create new secret key"
-   - Copy that new key
-
-4. Set up your environment:
-   - Create a .env file in the root of the project with:
-      - OPENAI_API_KEY="YOUR_SECRET_KEY_HERE"
-
-## 🎉 Let's Run This Thing!
-
-1. Fire it up:
+3. Create a `.env` file in the project root:
    ```
-   python Live.py
-   ```
-2. Name your transcription.
-
-3. Hit "Start Transcription" and let your computer talk to itself or you talk to yourself.
-
-4. When you're done, click "Stop Transcription". Magic!
-
-5. You can hit the big red button 'clear' to clear your previous transcription.
-
-6. Check out your transcribed masterpiece in the app window. We've also saved a copy in the `output` folder. You will have three files "Name, Name_cleaned and Name_summary"
-
-## 🤝 Want to Make It Better?
-
-Got ideas? Found a bug? Think you can make it even cooler? Awesome! Feel free to dive in and make changes. Just be nice and send a Pull Request so we can all benefit from your genius.
-
-## 📜 Legal Stuff
-
-This project is under the MIT License. Do whatever you want with it, just don't blame me if something goes wrong. Check out the [LICENSE](LICENSE) file for the boring details.
-
-## 🔄 Updating to the Latest Version
-
-To ensure you're using the latest models and features:
-
-1. Update your dependencies:
-   ```
-   pip install --upgrade -r requirements.txt
+   DEEPGRAM_API_KEY=your_deepgram_key_here
+   OPENAI_API_KEY=your_openai_key_here
    ```
 
-2. The app now uses OpenAI's **gpt-4o-transcribe** model, which offers:
-   - Improved accuracy over the old whisper-1 model
-   - Better handling of accents and noisy environments
-   - More reliable transcription with varying speech speeds
-   - Automatic fallback to whisper-1 if the new model is unavailable
+4. Run it:
+   ```bash
+   python Live_Enhanced.py
+   ```
 
-## 🆘 Help! Something's Not Working!
+## For non-developers (Easy mode)
 
-If things go sideways:
-- Make sure your OPENAI_API_KEY is set up correctly in the .env file. No typos!
-- Check if your OpenAI account is still active and has available credits
-- Is your internet working? The app needs to talk to OpenAI's servers, so no internet = no transcription
-- The app now processes audio in 5-second chunks, so there might be a slight delay compared to real-time streaming
-- Run `python test_whisper.py` to verify your setup is working correctly
+Just want to use it without dealing with Python? No problem:
 
-Happy transcribing! 🎉🎊
+1. Download the latest release from the [Releases page](../../releases)
+2. Extract the folder somewhere on your computer
+3. Create a `.env` file next to the .exe with your API keys (see step 3 above)
+4. Double-click `Live Transcription.exe` and you're good to go!
+
+## How to use it
+
+1. Launch the app
+2. Pick your audio source (computer audio, microphone, or both)
+3. Choose your audio devices from the settings if needed
+4. Give your transcription a name (or just use "Untitled", we don't judge)
+5. Hit that big "Start Transcription" button
+6. Do your thing - talk, play a video, join a meeting, whatever
+7. Click "Stop Transcription" when you're done
+8. Want it cleaned up? Click "Clean Transcription" or "Summarize" to let AI work its magic
+9. Everything gets saved to the `output` folder automatically
+
+## Features you might not notice right away
+
+- **Auto-saves** - Your transcriptions are saved as you go, so you won't lose anything
+- **Smart punctuation** - Deepgram adds proper punctuation automatically
+- **Word count** - Bottom of the screen shows real-time word count
+- **Tabbed interface** - Switch between raw transcription, cleaned version, and summary
+- **Settings persist** - The app remembers your audio device choices between sessions
+- **List audio devices** - Run `list_audio_devices.py` to see all available audio devices on your system
+
+## Building from source
+
+Want to make your own executable? Check out [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) for the full guide. There's even a build script (`build_app.bat`) that does everything for you.
+
+## Troubleshooting
+
+**"API key not found" error:**
+Make sure your `.env` file is in the same folder as the executable (or in the project root if running from Python). Double-check for typos in your keys.
+
+**No audio devices showing up:**
+Run `list_audio_devices.py` to see what devices are available. On Windows, you might need to install the [VC++ Redistributables](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+
+**Transcription isn't starting:**
+Check your internet connection - both Deepgram and OpenAI need to be reachable. Also make sure your API keys are valid and have credits available.
+
+**Audio sounds choppy or cuts out:**
+Try adjusting the buffer size in the audio settings, or restart the app. Sometimes audio drivers just need a kick.
+
+## Contributing
+
+Found a bug? Have an idea to make this better? PRs are welcome! Just keep things clean and follow the existing code style. Or open an issue if you just want to chat about it.
+
+## License
+
+MIT License - do whatever you want with this. See [LICENSE](LICENSE) for the boring legal text.
+
+## Shoutout
+
+Big thanks to Deepgram for their awesome transcription API and OpenAI for making text cleanup easy. Also shoutout to Teenage Engineering for the design inspiration - your products look way too good.
+
+---
+
+Built with Python, too much coffee, and the desire to never manually type meeting notes again.
+
