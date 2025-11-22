@@ -8,7 +8,7 @@ So you know how sometimes you're in a meeting, watching a video, or just talking
 ## What does this thing actually do?
 
 - **Live transcription** - Uses Deepgram's API to transcribe audio as it happens (seriously, it's fast)
-- **Speaker diarization** - Figures out who's talking when (works with multiple speakers)
+- **Speaker diarization** - Figures out who's talking when (Yeah this is not working as of now needs bigger chunks of audio which will not working with the real time I am trying to achieve, but I will keep looking for a solution!)
 - **Computer audio or mic** - Capture system audio from videos/calls or use your microphone (or both at once!)
 - **AI-powered cleanup** - After transcribing, OpenAI cleans up the text and makes a nice summary
 - **Modern UI** - Dark mode with a Teenage Engineering-inspired design (because why not look good while transcribing?)
